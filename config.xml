@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myappfe20d9" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="1">
-  <name>Electoral Comm</name>
-  <description>App to count votes from districts</description>
-  <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
+  <name>Mobile Web Project</name>
+  <description>Car pool app</description>
+  <author href="http://cordova.io" email="dev@cordova.apache.org">George O. </author>
   <content src="index.html" />
   <access origin="*" />
   <vs:features />
