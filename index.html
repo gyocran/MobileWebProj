@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Pool</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+	<link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script>
+				var userAgent = navigator.userAgent + '';
+			if (userAgent.indexOf('iPhone') > -1) {
+				document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+				var mobile_system = 'iphone';
+			} else if (userAgent.indexOf('Android') > -1) {
+				document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+				var mobile_system = 'android';
+			} else {
+				var mobile_system = '';
+			}
+		</script>
+	
+	<style>
+			.ui-selectmenu.ui-popup .ui-input-search {
+				margin-left: .5em;
+				margin-right: .5em;
+			}
+			.ui-selectmenu.ui-dialog .ui-content {
+				padding-top: 0;
+			}
+			.ui-selectmenu.ui-dialog .ui-selectmenu-list {
+				margin-top: 0;
+			}
+			.ui-selectmenu.ui-popup .ui-selectmenu-list li.ui-first-child .ui-btn {
+				border-top-width: 1px;
+				-webkit-border-radius: 0;
+				border-radius: 0;
+			}
+			.ui-selectmenu.ui-dialog .ui-header {
+				border-bottom-width: 1px;
+			}
+			a {
+				text-decoration: none;
+			}
+		</style>
+		
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/jquery.mobile.js"></script>
+		<script src="js/app/bootstrap.js"></script>
+</head>
+<body>
+<div data-role="page" id="landingPage" style="background: white">
+			<div data-role="header" style="text-shadow: none">
+				<h1>Car Pool!</h1>
+				<a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+			</div><!-- /header -->
+			<center><img src="css/images/homeicon.jpg" style="height: 150px; margin: auto"></center>
+			<div data-role="content" style="text-shadow: none">
+				<div id="login">
+					<div style = "color:red" id = "errorMsg"> </div>
+					<input type="text" placeholder="username" id="username" name = "username">
+					<input type="password" placeholder="password" id="password" name = "pword">
+					<input type="submit" id="loginbutton" value="Sign In">
+					
+					<!-- onclick="login()"> -->
+				</div>
+				<button id="alertTest">Test</button>
+				<a href="#poolPage" data-transition="pop">
+				<button>poolspage</button>
+				</a>
+				<!-- <a href="#resultsPage" data-transition="pop"> -->
+				<!-- <button>Results</button> -->
+				<!-- </a> -->
+				<!-- <a href="#resultsPage" data-transition="pop"> -->
+				<!-- <a href="#camera" id="capturePhoto" class="button result color-white">Camera -->
+				<!-- <button>Camera</button> -->
+				<!-- </a> -->
+				<!-- </a> -->
+				<br />
+
+			</div><!-- /content -->
+		</div><!-- /page -->
+		
+		<div data-role="page" id="poolPage" style="background: white">
+			<div data-role="header" style="text-shadow: none">
+				<h1>Car Pool!</h1>
+				<a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+			</div><!-- /header -->
+			<div data-role="content" style="text-shadow: none">
+				<a href="#addPoolPage"><button id="createPool" class="btn btn-success">Create a pool</button></a>
+				<button id="getPools">Checkout all pools</button>
+				<table id="currentPools" class="table table-striped">
+					<thead> </thead>
+					<tbody>
+						<tr><td>h</td></tr>
+						<tr><td>p</td></tr>
+					</tbody>
+				</table>
+				<!-- <a href="#declareRegions" data-transition="pop"> -->
+				<!-- <button>Declare</button> -->
+				<!-- </a> -->
+				<!-- <a href="#resultsPage" data-transition="pop"> -->
+				<!-- <button>Results</button> -->
+				<!-- </a> -->
+				<!-- <a href="#resultsPage" data-transition="pop"> -->
+				<!-- <a href="#camera" id="capturePhoto" class="button result color-white">Camera -->
+				<!-- <button>Camera</button> -->
+				<!-- </a> -->
+				<!-- </a> -->
+				<br />
+
+			</div><!-- /content -->
+		</div><!-- /page -->
+		
+		<div data-role="page" id="addPoolPage" style="background: white">
+			<div data-role="header" style="text-shadow: none">
+				<h1>Car Pool!</h1>
+				<a href="index.html" data-role="button" data-icon="back" data-iconpos="notext" style="background: white;border: none;">Back</a>
+				<br />
+			</div><!-- /header -->
+			<div data-role="content" style="text-shadow: none">
+				<form action="" method="GET" >
+					<div class="form-group">
+						<label for="Username">Username</label>
+						<input type="text" class="form-control" id="username" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label for="Maximum Pool Size">Maximum Pool Size</label>
+						<input type="number" class="form-control" id="maxpoolsize" placeholder="Max Pool Size">
+					</div>
+					<div class="form-group">
+						<label for="Pool Price">Price</label>
+						<input type="number" class="form-control" id="price" placeholder="Price">
+					</div>
+					<div class="form-group">
+						<label for="Departure Time">Departure Time</label>
+						<input type="time" class="form-control" id="depaturetime" placeholder="Departure Time">
+					</div>
+					
+				<button id="newPool" type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div><!-- /content -->
+		</div><!-- /page -->
+		
+	<!-- <script src="js/app/app.js"></script> -->
+	
+	<script src="js/lib/cordova.js"></script>
+	<script src="js/lib/index.js"></script>
+	</body>
+</html>
